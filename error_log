@@ -1,0 +1,43 @@
+[18-Feb-2026 00:34:46 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined function isTetCampaignActive() in /home/lxhyhqts/timngachchuan.com/config/lixitet.php:8
+Stack trace:
+#0 /home/lxhyhqts/timngachchuan.com/tet-promo.php(5): require_once()
+#1 {main}
+  thrown in /home/lxhyhqts/timngachchuan.com/config/lixitet.php on line 8
+[18-Feb-2026 07:56:17 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected token "," in /home/lxhyhqts/timngachchuan.com/config/lixitet.php on line 75
+[23-Feb-2026 09:56:34 Asia/Ho_Chi_Minh] PHP Warning:  require_once(includes/lixitet.php): Failed to open stream: No such file or directory in /home/lxhyhqts/timngachchuan.com/tet-promo.php on line 5
+[23-Feb-2026 09:56:34 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required 'includes/lixitet.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lxhyhqts/timngachchuan.com/tet-promo.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/lxhyhqts/timngachchuan.com/tet-promo.php on line 5
+[02-Mar-2026 09:51:20 Asia/Ho_Chi_Minh] PHP Warning:  require_once(config/march_promo.php): Failed to open stream: No such file or directory in /home/lxhyhqts/timngachchuan.com/march-promo.php on line 5
+[02-Mar-2026 09:51:20 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required 'config/march_promo.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lxhyhqts/timngachchuan.com/march-promo.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/lxhyhqts/timngachchuan.com/march-promo.php on line 5
+[20-Mar-2026 13:56:45 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required 'wp-blog-header.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lxhyhqts/timngachchuan.com/sapp-wp-signon.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/lxhyhqts/timngachchuan.com/sapp-wp-signon.php on line 40
+[20-Mar-2026 13:59:20 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required 'wp-blog-header.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lxhyhqts/timngachchuan.com/sapp-wp-signon.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/lxhyhqts/timngachchuan.com/sapp-wp-signon.php on line 40
+[07-Apr-2026 13:32:15 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required 'wp-blog-header.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lxhyhqts/timngachchuan.com/sapp-wp-signon.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/lxhyhqts/timngachchuan.com/sapp-wp-signon.php on line 40
+[13-Apr-2026 23:00:20 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/lxhyhqts/timngachchuan.com/includes/functions.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lxhyhqts/timngachchuan.com/includes/remember_me.php:9
+Stack trace:
+#0 /home/lxhyhqts/timngachchuan.com/includes/session.php(19): require_once()
+#1 /home/lxhyhqts/timngachchuan.com/scanner.php(3): require_once('/home/lxhyhqts/...')
+#2 {main}
+  thrown in /home/lxhyhqts/timngachchuan.com/includes/remember_me.php on line 9
+[24-Apr-2026 14:35:42 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required 'wp-blog-header.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lxhyhqts/timngachchuan.com/sapp-wp-signon.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/lxhyhqts/timngachchuan.com/sapp-wp-signon.php on line 40
+[26-Apr-2026 08:13:01 Europe/London] PHP Notice:  Undefined variable: content in /home2/ndgroupm/htpgroupmedia.com/sepay_webhook.php on line 8
+[26-Apr-2026 08:13:01 Europe/London] PHP Notice:  Undefined variable: content in /home2/ndgroupm/htpgroupmedia.com/sepay_webhook.php on line 49
+[26-Apr-2026 08:14:49 Europe/London] PHP Parse error:  syntax error, unexpected end of file in /home2/ndgroupm/htpgroupmedia.com/sepay_webhook.php on line 204
+[26-Apr-2026 08:15:27 Europe/London] PHP Parse error:  syntax error, unexpected end of file in /home2/ndgroupm/htpgroupmedia.com/sepay_webhook.php on line 204
+[27-Apr-2026 17:48:01 Asia/Ho_Chi_Minh] User xathanhluan expired → set to FREE

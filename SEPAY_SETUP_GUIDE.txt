@@ -1,0 +1,104 @@
+==================================================
+HƯỚNG DẪN CÀI ĐẶT THANH TOÁN TỰ ĐỘNG SEPAY
+==================================================
+
+📌 YÊU CẦU:
+- Đã có tài khoản SePay (đã đăng ký API)
+- Domain: <?php echo getBaseUrl(); ?> đã trỏ hosting
+
+==================================================
+BƯỚC 1: LẤY THÔNG TIN TỪ SEPAYS
+==================================================
+
+1. Đăng nhập: https://sepay.vn
+2. Vào: Cài đặt → API / Webhook
+3. Lấy các thông tin sau:
+   - API Key
+   - API Secret  
+   - Webhook URL (tự tạo): https://<?php echo getBaseUrl(); ?>/sepay_webhook.php
+   - Tạo mã bí mật (Secret): VD: NDG2024SEP@2026
+
+==================================================
+BƯỚC 2: CẤU HÌNH WEBHOOK URL TRONG SEPAY
+==================================================
+
+Trong trang quản trị SePay:
+1. Tìm mục "Webhook" hoặc "Callback URL"
+2. Thêm URL mới: https://<?php echo getBaseUrl(); ?>/sepay_webhook.php
+3. Nhập mã bí mật bạn vừa tạo
+4. Chọn sự kiện: "payment.success" hoặc "transaction.completed"
+5. Lưu lại
+
+==================================================
+BƯỚC 3: CẬP NHẬT FILE sepay_webhook.php
+==================================================
+
+Mở file: sepay_webhook.php
+Dòng ~15, thay thế:
+
+$sepaySecret = 'YOUR_SEPAY_SECRET'; 
+
+Bằng mã bạn tạo ở BƯỚC 1:
+
+$sepaySecret = 'NDG2024SEP@2026'; // Ví dụ
+
+==================================================
+BƯỚC 4: KIỂM TRA HOẠT ĐỘNG
+==================================================
+
+1. Upload files lên host (nếu chưa)
+2. Tạo thư mục data/ nếu chưa có:
+   chmod 755 data/
+
+3. Test webhook bằng cách:
+   a. Tạo 1 đơn hàng test trên web
+   b. Chuyển khoản với nội dung: testuser trial
+   c. Kiểm tra log tại: data/sepay_webhook.log
+   
+4. Nếu thấy log "SUCCESS!" là đã ổn!
+
+==================================================
+BƯỚC 5: CẤU HÌNH CRON JOB (OPTIONAL)
+==================================================
+
+Để dự phòng khi webhook không hoạt động:
+
+1. Vào hosting control panel → Cron Jobs
+2. Thêm cron job mới:
+   Command: 
+   */5 * * * * curl https://<?php echo getBaseUrl(); ?>/sepay_check.php
+   
+   (Chạy mỗi 5 phút)
+
+==================================================
+XỬ LÝ SỰ CỐ
+==================================================
+
+❌ LỖI: Không nhận được webhook
+→ Kiểm tra firewall của host
+→ Đảm bảo phương thức POST được cho phép
+→ Test bằng Postman gửi request tới sepay_webhook.php
+
+❌ LỖI: Đơn hàng không được kích hoạt
+→ Kiểm tra log: data/sepay_webhook.log
+→ Xem nội dung chuyển khoản có đúng format không
+→ Kiểm tra amount có khớp với giá trong database không
+
+❌ LỖI: File permission denied
+→ chmod 644 sepay_webhook.php
+→ chmod 755 data/
+→ chmod 666 data/sepay_webhook.log (sau khi tạo)
+
+==================================================
+LIÊN HỆ HỖ TRỢ
+==================================================
+
+Nếu gặp vấn đề, kiểm tra:
+1. Log file: data/sepay_webhook.log
+2. PHP error log của host
+3. SePay transaction history
+
+Hotline: 0944851719
+Email: support@hungniwaco.shop
+
+==================================================
