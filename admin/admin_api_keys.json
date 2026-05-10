@@ -1,0 +1,17 @@
+{
+    "youtube_shared": [
+        {
+            "key": "",
+            "name": "Shared Key 1",
+            "status": "active",
+            "daily_limit": 1500,
+            "usage_today": 0,
+            "reset_at": "2026-03-21 00:00:00"
+        }
+    ],
+    "openrouter": {
+        "key": "",
+        "status": "inactive",
+        "model": "google/gemini-2.5-flash-exp:free"
+    }
+}
